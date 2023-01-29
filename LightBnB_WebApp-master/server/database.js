@@ -23,7 +23,6 @@ const getUserWithEmail = function(email) {
   return pool
     .query(`SELECT * FROM users WHERE email = $1`, [email])
     .then((result) => {
-      // console.log(result.rows);
       return result.rows[0] === undefined ? null : result.rows[0];
     })
     .catch((err) => {
@@ -42,7 +41,6 @@ const getUserWithId = function(id) {
   return pool
     .query(`SELECT * FROM users WHERE id = $1`, [id])
     .then((result) => {
-      // console.log(result.rows);
       return result.rows[0] === undefined ? null : result.rows[0];
     })
     .catch((err) => {
@@ -61,7 +59,6 @@ const addUser =  function(user) {
   return pool
     .query(`INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *`, [user.name, user.email, user.password])
     .then((result) => {
-      // console.log(result.rows);
       return result.rows[0];
     })
     .catch((err) => {
@@ -89,7 +86,6 @@ const getAllReservations = function(guest_id, limit = 10) {
   ORDER BY reservations.start_date
   LIMIT $2`, [guest_id, limit])
   .then((result) => {
-    // console.log(result.rows);
     return result.rows;
   })
   .catch((err) => {
@@ -110,7 +106,6 @@ const getAllProperties = (options, limit = 10) => {
   return pool
     .query(`SELECT * FROM properties LIMIT $1`, [limit])
     .then((result) => {
-      //console.log(result.rows);
       return result.rows;
     })
     .catch((err) => {
@@ -133,16 +128,3 @@ const addProperty = function(property) {
   return Promise.resolve(property);
 }
 exports.addProperty = addProperty;
-
-// pool.query ('SELECT * FROM users WHERE LOWER)email) = $1, [email.toLowerCase()')
-// .then(result => {
-//   if (result.rows.length) {
-//     return result.rows[0]
-//   }
-//   return null
-// })
-// .catch(err => {
-//   console.log(err.message)
-// })
-
-//email@gmail.com
