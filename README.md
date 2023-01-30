@@ -59,24 +59,24 @@ A multi-page AirBnB application that was created as part of Lighthouse Labs Web 
   * `json` is a directory that contains a bunch of dummy data in `.json` files.
   * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
 
-  ## Project ERD
-  !["ERD"](https://github.com/Datazyme/LightBnB/blob/master/docs/ERD.png)
+## Project ERD
+!["ERD"](https://github.com/Datazyme/LightBnB/blob/master/docs/ERD.png)
 
 ## Getting Started
 
-1. Clone your repository onto your local device.
+1. Clone the repository onto your local device.
 2. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:3000/>.
 4. Go to <http://localhost:3000/> in your browser.
 
-  ## Dependencies
+## Dependencies
 
-  - bcrypt: 5.1.0
-  - body-parser: 1.19.0
-  - cookie-session: 1.3.3
-  - express: 4.17.1
-  - nodemon: 1.19.1
-  - pg: 8.8.0
+- bcrypt: 5.1.0
+- body-parser: 1.19.0
+- cookie-session: 1.3.3
+- express: 4.17.1
+- nodemon: 1.19.1
+- pg: 8.8.0
 
 
 
