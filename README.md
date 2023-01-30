@@ -69,12 +69,12 @@ A multi-page AirBnB application that was created as part of Lighthouse Labs Web 
   4. Go to <http://localhost:3000/> in your browser.
 
   # Dependencies
-- bcrypt: 5.1.0
-- body-parser: 1.19.0
-- cookie-session: 1.3.3
-- express: 4.17.1
-- nodemon: 1.19.1
-- pg: 8.8.0
+  - bcrypt: 5.1.0
+  - body-parser: 1.19.0
+  - cookie-session: 1.3.3
+  - express: 4.17.1
+  - nodemon: 1.19.1
+  - pg: 8.8.0
 
 
 
