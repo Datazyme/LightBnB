@@ -64,13 +64,19 @@ A multi-page AirBnB application that was created as part of Lighthouse Labs Web 
 
   ## Getting Started
 
+  1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
+2. Clone your repository onto your local device.
+3. Install dependencies using the `npm install` command.
+3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+4. Go to <http://localhost:8080/> in your browser.
+
   1. Clone your repository onto your local device.
   2. Install dependencies using the `npm install` command.
   3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:3000/>.
   4. Go to <http://localhost:3000/> in your browser.
 
   ## Dependencies
-  
+
   - bcrypt: 5.1.0
   - body-parser: 1.19.0
   - cookie-session: 1.3.3
