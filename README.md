@@ -1,27 +1,20 @@
-# LightBnB
+# **LightBnB**
 A multi-page AirBnB application that was created as part of Lighthouse Labs Web development course. A user can sign up to view properties by city, minimum and maximum price and rating. A user can also view previous reservations, post properties which include photos, address, cost per night, number of bedrooms, bathrooms and parking spaces. Data is stored in an SQL database. To use the app just clone the repository, then `npm install`, then `npm run local` to run on localhost:3000.
 
-# Final Product Screenshots
+## Final Product Screenshots
 
-## It's easy to sign up!
+### It's easy to sign up!
 !["Sign up"](https://github.com/Datazyme/LightBnB/blob/master/docs/Sign_Up.png)
 
-## And log in!
+### And log in!
 !["Log In"](https://github.com/Datazyme/LightBnB/blob/master/docs/Log_In.png)
 
-## See all your previous reservations!
+### See all your previous reservations!
 !["See Previous Reservations"](https://github.com/Datazyme/LightBnB/blob/master/docs/My_Reservations.png)
 
-## Search BnB's for your next trip by city, minimum price, maximum price or rating (scores of 1-5)!
+### Search BnB's for your next trip by city, minimum price, maximum price or rating (scores of 1-5)!
 !["Search Options"](https://github.com/Datazyme/LightBnB/blob/master/docs/Search_Options.png)
 !["Search Results"](https://github.com/Datazyme/LightBnB/blob/master/docs/Search_Results.png)
-
-
-
-## Small screen view
-<p align="center">
-    <img src="https://github.com/Datazyme/tweeter/blob/master/docs/tweeterSmallScreen.png">
-</p>
 
 
 ## Project Structure
