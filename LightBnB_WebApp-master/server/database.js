@@ -9,9 +9,6 @@ const pool = new Pool({
   database: 'lightbnb'
 });
 
-// the following assumes that you named your connection variable `pool`
-//pool.query(`SELECT title FROM properties LIMIT 10;`).then(response => {console.log(response)})
-
 /// Users
 
 /**
@@ -48,7 +45,6 @@ const getUserWithId = function(id) {
     });
 };
 exports.getUserWithId = getUserWithId;
-
 
 /**
  * Add a new user to the database.
@@ -103,16 +99,14 @@ exports.getAllReservations = getAllReservations;
  * @return {Promise<[{}]>}  A promise to the properties.
  */
 const getAllProperties = (options, limit = 10) => {
-    // 1
     const queryParams = [];
-    // 2
+
     let queryString = `
     SELECT properties.*, avg(property_reviews.rating) as average_rating
     FROM properties
     JOIN property_reviews ON properties.id = property_id
     `;
   
-    // 3
     if (options.city) {
       if (queryString.includes('WHERE')) {
         queryString += 'AND';
@@ -152,7 +146,7 @@ const getAllProperties = (options, limit = 10) => {
       queryParams.push(options.maximum_price_per_night * 100);
       queryString += ` cost_per_night <= $${queryParams.length}`;
     }
-
+    //must have group by before having
     queryString += `
     GROUP BY properties.id
     `;
@@ -162,13 +156,12 @@ const getAllProperties = (options, limit = 10) => {
       queryString += `HAVING avg(property_reviews.rating) >= $${queryParams.length}`;
     }
   
-    // 4.
   queryParams.push(limit);
   queryString += `
   ORDER BY cost_per_night
   LIMIT $${queryParams.length};
   `;
-  
+
   return pool.query(queryString, queryParams).then((res) => res.rows);
 };
 exports.getAllProperties = getAllProperties;
